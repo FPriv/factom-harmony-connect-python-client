@@ -58,13 +58,8 @@ from pprint import pprint
 configuration = harmony_connect_client.Configuration()
 # Configure API key authorization: AppId
 configuration.api_key['app_id'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['app_id'] = 'Bearer'
-configuration = harmony_connect_client.Configuration()
 # Configure API key authorization: AppKey
 configuration.api_key['app_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['app_key'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = harmony_connect_client.ChainsApi(harmony_connect_client.ApiClient(configuration))
