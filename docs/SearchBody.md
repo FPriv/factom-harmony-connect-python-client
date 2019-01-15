@@ -1,4 +1,4 @@
-# ExternalIds
+# SearchBody
 
 ## Properties
 Name | Type | Description | Notes

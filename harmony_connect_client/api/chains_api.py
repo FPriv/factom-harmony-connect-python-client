@@ -329,17 +329,17 @@ class ChainsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_chain_search(self, external_ids, **kwargs):  # noqa: E501
+    def post_chain_search(self, search_body, **kwargs):  # noqa: E501
         """Search Chains  # noqa: E501
 
         Finds all of the chains with `external_ids` that match what you've entered. External IDs must be sent in Base64 format.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_chain_search(external_ids, async_req=True)
+        >>> thread = api.post_chain_search(search_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ExternalIds external_ids: (required)
+        :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
         :param int offset: The page you would like to request. The first page offset is Zero.
         :return: ChainList
@@ -348,22 +348,22 @@ class ChainsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_chain_search_with_http_info(external_ids, **kwargs)  # noqa: E501
+            return self.post_chain_search_with_http_info(search_body, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_chain_search_with_http_info(external_ids, **kwargs)  # noqa: E501
+            (data) = self.post_chain_search_with_http_info(search_body, **kwargs)  # noqa: E501
             return data
 
-    def post_chain_search_with_http_info(self, external_ids, **kwargs):  # noqa: E501
+    def post_chain_search_with_http_info(self, search_body, **kwargs):  # noqa: E501
         """Search Chains  # noqa: E501
 
         Finds all of the chains with `external_ids` that match what you've entered. External IDs must be sent in Base64 format.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_chain_search_with_http_info(external_ids, async_req=True)
+        >>> thread = api.post_chain_search_with_http_info(search_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ExternalIds external_ids: (required)
+        :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
         :param int offset: The page you would like to request. The first page offset is Zero.
         :return: ChainList
@@ -373,7 +373,7 @@ class ChainsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['external_ids', 'limit', 'offset']  # noqa: E501
+        all_params = ['search_body', 'limit', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -387,10 +387,10 @@ class ChainsApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'external_ids' is set
-        if ('external_ids' not in local_var_params or
-                local_var_params['external_ids'] is None):
-            raise ValueError("Missing the required parameter `external_ids` when calling `post_chain_search`")  # noqa: E501
+        # verify the required parameter 'search_body' is set
+        if ('search_body' not in local_var_params or
+                local_var_params['search_body'] is None):
+            raise ValueError("Missing the required parameter `search_body` when calling `post_chain_search`")  # noqa: E501
 
         collection_formats = {}
 
@@ -408,8 +408,8 @@ class ChainsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'external_ids' in local_var_params:
-            body_params = local_var_params['external_ids']
+        if 'search_body' in local_var_params:
+            body_params = local_var_params['search_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
