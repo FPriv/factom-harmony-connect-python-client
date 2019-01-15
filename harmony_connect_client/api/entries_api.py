@@ -437,18 +437,18 @@ class EntriesApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_entries_search(self, chain_id, external_ids, **kwargs):  # noqa: E501
+    def post_entries_search(self, chain_id, search_body, **kwargs):  # noqa: E501
         """Search Chain's Entries  # noqa: E501
 
         Find all of the entries within the specified chain that have the requested `external_ids`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_entries_search(chain_id, external_ids, async_req=True)
+        >>> thread = api.post_entries_search(chain_id, search_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str chain_id: Chain identifier (required)
-        :param ExternalIds external_ids: (required)
+        :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
         :param int offset: The page you would like to request. The first page offset is Zero.
         :return: EntrySearchResponse
@@ -457,23 +457,23 @@ class EntriesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_entries_search_with_http_info(chain_id, external_ids, **kwargs)  # noqa: E501
+            return self.post_entries_search_with_http_info(chain_id, search_body, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_entries_search_with_http_info(chain_id, external_ids, **kwargs)  # noqa: E501
+            (data) = self.post_entries_search_with_http_info(chain_id, search_body, **kwargs)  # noqa: E501
             return data
 
-    def post_entries_search_with_http_info(self, chain_id, external_ids, **kwargs):  # noqa: E501
+    def post_entries_search_with_http_info(self, chain_id, search_body, **kwargs):  # noqa: E501
         """Search Chain's Entries  # noqa: E501
 
         Find all of the entries within the specified chain that have the requested `external_ids`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_entries_search_with_http_info(chain_id, external_ids, async_req=True)
+        >>> thread = api.post_entries_search_with_http_info(chain_id, search_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str chain_id: Chain identifier (required)
-        :param ExternalIds external_ids: (required)
+        :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
         :param int offset: The page you would like to request. The first page offset is Zero.
         :return: EntrySearchResponse
@@ -483,7 +483,7 @@ class EntriesApi(object):
 
         local_var_params = locals()
 
-        all_params = ['chain_id', 'external_ids', 'limit', 'offset']  # noqa: E501
+        all_params = ['chain_id', 'search_body', 'limit', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -501,10 +501,10 @@ class EntriesApi(object):
         if ('chain_id' not in local_var_params or
                 local_var_params['chain_id'] is None):
             raise ValueError("Missing the required parameter `chain_id` when calling `post_entries_search`")  # noqa: E501
-        # verify the required parameter 'external_ids' is set
-        if ('external_ids' not in local_var_params or
-                local_var_params['external_ids'] is None):
-            raise ValueError("Missing the required parameter `external_ids` when calling `post_entries_search`")  # noqa: E501
+        # verify the required parameter 'search_body' is set
+        if ('search_body' not in local_var_params or
+                local_var_params['search_body'] is None):
+            raise ValueError("Missing the required parameter `search_body` when calling `post_entries_search`")  # noqa: E501
 
         collection_formats = {}
 
@@ -524,8 +524,8 @@ class EntriesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'external_ids' in local_var_params:
-            body_params = local_var_params['external_ids']
+        if 'search_body' in local_var_params:
+            body_params = local_var_params['search_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import harmony_connect_client
-from harmony_connect_client.models.external_ids import ExternalIds  # noqa: E501
+from harmony_connect_client.models.search_body import SearchBody  # noqa: E501
 from harmony_connect_client.rest import ApiException
 
 
-class TestExternalIds(unittest.TestCase):
-    """ExternalIds unit test stubs"""
+class TestSearchBody(unittest.TestCase):
+    """SearchBody unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestExternalIds(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testExternalIds(self):
-        """Test ExternalIds"""
+    def testSearchBody(self):
+        """Test SearchBody"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = harmony_connect_client.models.external_ids.ExternalIds()  # noqa: E501
+        # model = harmony_connect_client.models.search_body.SearchBody()  # noqa: E501
         pass
 
 

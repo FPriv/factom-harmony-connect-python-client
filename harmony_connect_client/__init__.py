@@ -47,4 +47,4 @@ from harmony_connect_client.models.entry_list_data import EntryListData
 from harmony_connect_client.models.entry_search_response import EntrySearchResponse
 from harmony_connect_client.models.entry_search_response_data import EntrySearchResponseData
 from harmony_connect_client.models.entry_short import EntryShort
-from harmony_connect_client.models.external_ids import ExternalIds
+from harmony_connect_client.models.search_body import SearchBody

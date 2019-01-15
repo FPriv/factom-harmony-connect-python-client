@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_chain_search**
-> ChainList post_chain_search(external_ids, limit=limit, offset=offset)
+> ChainList post_chain_search(search_body, limit=limit, offset=offset)
 
 Search Chains
 
@@ -283,13 +283,13 @@ configuration.api_key['app_id'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = harmony_connect_client.ChainsApi(harmony_connect_client.ApiClient(configuration))
-external_ids = harmony_connect_client.ExternalIds() # ExternalIds | 
+search_body = harmony_connect_client.SearchBody() # SearchBody | 
 limit = 15 # int | The number of items you would like back in each page. (optional)
 offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
 
 try:
     # Search Chains
-    api_response = api_instance.post_chain_search(external_ids, limit=limit, offset=offset)
+    api_response = api_instance.post_chain_search(search_body, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ChainsApi->post_chain_search: %s\n" % e)
@@ -311,13 +311,13 @@ configuration.api_key['app_key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = harmony_connect_client.ChainsApi(harmony_connect_client.ApiClient(configuration))
-external_ids = harmony_connect_client.ExternalIds() # ExternalIds | 
+search_body = harmony_connect_client.SearchBody() # SearchBody | 
 limit = 15 # int | The number of items you would like back in each page. (optional)
 offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
 
 try:
     # Search Chains
-    api_response = api_instance.post_chain_search(external_ids, limit=limit, offset=offset)
+    api_response = api_instance.post_chain_search(search_body, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ChainsApi->post_chain_search: %s\n" % e)
@@ -327,7 +327,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_ids** | [**ExternalIds**](ExternalIds.md)|  | 
+ **search_body** | [**SearchBody**](SearchBody.md)|  | 
  **limit** | **int**| The number of items you would like back in each page. | [optional] 
  **offset** | **int**| The page you would like to request. The first page offset is Zero. | [optional] 
 
