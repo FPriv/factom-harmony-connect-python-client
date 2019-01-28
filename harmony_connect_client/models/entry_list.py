@@ -33,9 +33,9 @@ class EntryList(object):
     """
     openapi_types = {
         'data': 'list[EntryListData]',
-        'offset': 'str',
-        'limit': 'str',
-        'count': 'str'
+        'offset': 'int',
+        'limit': 'int',
+        'count': 'int'
     }
 
     attribute_map = {
@@ -88,10 +88,10 @@ class EntryList(object):
     def offset(self):
         """Gets the offset of this EntryList.  # noqa: E501
 
-        The page offset. (Current page -1)  # noqa: E501
+        The first entry returned from the total set (Starting from 0).  # noqa: E501
 
         :return: The offset of this EntryList.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._offset
 
@@ -99,10 +99,10 @@ class EntryList(object):
     def offset(self, offset):
         """Sets the offset of this EntryList.
 
-        The page offset. (Current page -1)  # noqa: E501
+        The first entry returned from the total set (Starting from 0).  # noqa: E501
 
         :param offset: The offset of this EntryList.  # noqa: E501
-        :type: str
+        :type: int
         """
         if offset is None:
             raise ValueError("Invalid value for `offset`, must not be `None`")  # noqa: E501
@@ -113,10 +113,10 @@ class EntryList(object):
     def limit(self):
         """Gets the limit of this EntryList.  # noqa: E501
 
-        The maximum number of entries per page.  # noqa: E501
+        The number of entries returned.  # noqa: E501
 
         :return: The limit of this EntryList.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._limit
 
@@ -124,10 +124,10 @@ class EntryList(object):
     def limit(self, limit):
         """Sets the limit of this EntryList.
 
-        The maximum number of entries per page.  # noqa: E501
+        The number of entries returned.  # noqa: E501
 
         :param limit: The limit of this EntryList.  # noqa: E501
-        :type: str
+        :type: int
         """
         if limit is None:
             raise ValueError("Invalid value for `limit`, must not be `None`")  # noqa: E501
@@ -141,7 +141,7 @@ class EntryList(object):
         The total number of entries seen.  # noqa: E501
 
         :return: The count of this EntryList.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._count
 
@@ -152,7 +152,7 @@ class EntryList(object):
         The total number of entries seen.  # noqa: E501
 
         :param count: The count of this EntryList.  # noqa: E501
-        :type: str
+        :type: int
         """
         if count is None:
             raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
