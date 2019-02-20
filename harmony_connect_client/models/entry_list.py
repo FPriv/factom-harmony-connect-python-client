@@ -88,7 +88,7 @@ class EntryList(object):
     def offset(self):
         """Gets the offset of this EntryList.  # noqa: E501
 
-        The first entry returned from the total set (Starting from 0).  # noqa: E501
+        The index of the first entry returned from the total set (Starting from 0).  # noqa: E501
 
         :return: The offset of this EntryList.  # noqa: E501
         :rtype: int
@@ -99,7 +99,7 @@ class EntryList(object):
     def offset(self, offset):
         """Sets the offset of this EntryList.
 
-        The first entry returned from the total set (Starting from 0).  # noqa: E501
+        The index of the first entry returned from the total set (Starting from 0).  # noqa: E501
 
         :param offset: The offset of this EntryList.  # noqa: E501
         :type: int

@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # import apis into sdk package
 from harmony_connect_client.api.chains_api import ChainsApi
@@ -31,6 +31,8 @@ from harmony_connect_client.models.all_info_links import AllInfoLinks
 from harmony_connect_client.models.chain import Chain
 from harmony_connect_client.models.chain_create import ChainCreate
 from harmony_connect_client.models.chain_data import ChainData
+from harmony_connect_client.models.chain_data_dblock import ChainDataDblock
+from harmony_connect_client.models.chain_data_eblock import ChainDataEblock
 from harmony_connect_client.models.chain_data_entries import ChainDataEntries
 from harmony_connect_client.models.chain_link import ChainLink
 from harmony_connect_client.models.chain_list import ChainList
@@ -39,10 +41,10 @@ from harmony_connect_client.models.chain_short import ChainShort
 from harmony_connect_client.models.entry import Entry
 from harmony_connect_client.models.entry_create import EntryCreate
 from harmony_connect_client.models.entry_data import EntryData
+from harmony_connect_client.models.entry_data_dblock import EntryDataDblock
 from harmony_connect_client.models.entry_data_eblock import EntryDataEblock
-from harmony_connect_client.models.entry_link import EntryLink
-from harmony_connect_client.models.entry_link_chain import EntryLinkChain
 from harmony_connect_client.models.entry_list import EntryList
+from harmony_connect_client.models.entry_list_chain import EntryListChain
 from harmony_connect_client.models.entry_list_data import EntryListData
 from harmony_connect_client.models.entry_search_response import EntrySearchResponse
 from harmony_connect_client.models.entry_search_response_data import EntrySearchResponseData

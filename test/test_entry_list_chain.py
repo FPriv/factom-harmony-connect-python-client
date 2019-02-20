@@ -16,24 +16,23 @@ from __future__ import absolute_import
 import unittest
 
 import harmony_connect_client
-from harmony_connect_client.api.info_api import InfoApi  # noqa: E501
+from harmony_connect_client.models.entry_list_chain import EntryListChain  # noqa: E501
 from harmony_connect_client.rest import ApiException
 
 
-class TestInfoApi(unittest.TestCase):
-    """InfoApi unit test stubs"""
+class TestEntryListChain(unittest.TestCase):
+    """EntryListChain unit test stubs"""
 
     def setUp(self):
-        self.api = harmony_connect_client.api.info_api.InfoApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_get_api_info(self):
-        """Test case for get_api_info
-
-        API Info  # noqa: E501
-        """
+    def testEntryListChain(self):
+        """Test EntryListChain"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = harmony_connect_client.models.entry_list_chain.EntryListChain()  # noqa: E501
         pass
 
 

@@ -16,24 +16,23 @@ from __future__ import absolute_import
 import unittest
 
 import harmony_connect_client
-from harmony_connect_client.api.info_api import InfoApi  # noqa: E501
+from harmony_connect_client.models.chain_data_eblock import ChainDataEblock  # noqa: E501
 from harmony_connect_client.rest import ApiException
 
 
-class TestInfoApi(unittest.TestCase):
-    """InfoApi unit test stubs"""
+class TestChainDataEblock(unittest.TestCase):
+    """ChainDataEblock unit test stubs"""
 
     def setUp(self):
-        self.api = harmony_connect_client.api.info_api.InfoApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_get_api_info(self):
-        """Test case for get_api_info
-
-        API Info  # noqa: E501
-        """
+    def testChainDataEblock(self):
+        """Test ChainDataEblock"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = harmony_connect_client.models.chain_data_eblock.ChainDataEblock()  # noqa: E501
         pass
 
 

@@ -38,8 +38,8 @@ configuration.api_key['app_id'] = 'YOUR_API_KEY'
 api_instance = harmony_connect_client.EntriesApi(harmony_connect_client.ApiClient(configuration))
 chain_id = 285904 # str | Chain identifier
 limit = 15 # int | The number of items you would like back in each page. (optional)
-offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
-stages = 'stages_example' # str | The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'multi_az,factom'`. (optional)
+offset = 2 # int | The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position. (optional)
+stages = 'stages_example' # str | The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'replicated,factom'`. (optional)
 
 try:
     # Get Chain's Entries
@@ -67,8 +67,8 @@ configuration.api_key['app_key'] = 'YOUR_API_KEY'
 api_instance = harmony_connect_client.EntriesApi(harmony_connect_client.ApiClient(configuration))
 chain_id = 285904 # str | Chain identifier
 limit = 15 # int | The number of items you would like back in each page. (optional)
-offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
-stages = 'stages_example' # str | The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'multi_az,factom'`. (optional)
+offset = 2 # int | The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position. (optional)
+stages = 'stages_example' # str | The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'replicated,factom'`. (optional)
 
 try:
     # Get Chain's Entries
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chain_id** | **str**| Chain identifier | 
  **limit** | **int**| The number of items you would like back in each page. | [optional] 
- **offset** | **int**| The page you would like to request. The first page offset is Zero. | [optional] 
- **stages** | **str**| The immutability stages you want to restrict results to. You can choose any from &#x60;replicated&#x60;, &#x60;factom&#x60;, and &#x60;anchored&#x60;. If you would like to search among multiple stages, send them in a comma separated string. For example: &#x60;&#39;multi_az,factom&#39;&#x60;. | [optional] 
+ **offset** | **int**| The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you&#39;ve already seen the first 15 items and you&#39;d like the next set, you would send an offset of 15. &#x60;offset&#x3D;0&#x60; starts from the first item of the set and is the default position. | [optional] 
+ **stages** | **str**| The immutability stages you want to restrict results to. You can choose any from &#x60;replicated&#x60;, &#x60;factom&#x60;, and &#x60;anchored&#x60;. If you would like to search among multiple stages, send them in a comma separated string. For example: &#x60;&#39;replicated,factom&#39;&#x60;. | [optional] 
 
 ### Return type
 
@@ -375,7 +375,7 @@ api_instance = harmony_connect_client.EntriesApi(harmony_connect_client.ApiClien
 chain_id = 285904 # str | Chain identifier
 search_body = harmony_connect_client.SearchBody() # SearchBody | 
 limit = 15 # int | The number of items you would like back in each page. (optional)
-offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
+offset = 2 # int | The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position. (optional)
 
 try:
     # Search Chain's Entries
@@ -404,7 +404,7 @@ api_instance = harmony_connect_client.EntriesApi(harmony_connect_client.ApiClien
 chain_id = 285904 # str | Chain identifier
 search_body = harmony_connect_client.SearchBody() # SearchBody | 
 limit = 15 # int | The number of items you would like back in each page. (optional)
-offset = 2 # int | The page you would like to request. The first page offset is Zero. (optional)
+offset = 2 # int | The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position. (optional)
 
 try:
     # Search Chain's Entries
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
  **chain_id** | **str**| Chain identifier | 
  **search_body** | [**SearchBody**](SearchBody.md)|  | 
  **limit** | **int**| The number of items you would like back in each page. | [optional] 
- **offset** | **int**| The page you would like to request. The first page offset is Zero. | [optional] 
+ **offset** | **int**| The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you&#39;ve already seen the first 15 items and you&#39;d like the next set, you would send an offset of 15. &#x60;offset&#x3D;0&#x60; starts from the first item of the set and is the default position. | [optional] 
 
 ### Return type
 

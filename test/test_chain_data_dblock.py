@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import harmony_connect_client
-from harmony_connect_client.models.entry_link import EntryLink  # noqa: E501
+from harmony_connect_client.models.chain_data_dblock import ChainDataDblock  # noqa: E501
 from harmony_connect_client.rest import ApiException
 
 
-class TestEntryLink(unittest.TestCase):
-    """EntryLink unit test stubs"""
+class TestChainDataDblock(unittest.TestCase):
+    """ChainDataDblock unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestEntryLink(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testEntryLink(self):
-        """Test EntryLink"""
+    def testChainDataDblock(self):
+        """Test ChainDataDblock"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = harmony_connect_client.models.entry_link.EntryLink()  # noqa: E501
+        # model = harmony_connect_client.models.chain_data_dblock.ChainDataDblock()  # noqa: E501
         pass
 
 

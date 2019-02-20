@@ -33,11 +33,12 @@ class EntryData(object):
     """
     openapi_types = {
         'entry_hash': 'str',
-        'chain': 'EntryLinkChain',
+        'chain': 'EntryListChain',
         'created_at': 'str',
         'external_ids': 'list[str]',
         'content': 'str',
         'stage': 'str',
+        'dblock': 'EntryDataDblock',
         'eblock': 'EntryDataEblock'
     }
 
@@ -48,10 +49,11 @@ class EntryData(object):
         'external_ids': 'external_ids',
         'content': 'content',
         'stage': 'stage',
+        'dblock': 'dblock',
         'eblock': 'eblock'
     }
 
-    def __init__(self, entry_hash=None, chain=None, created_at=None, external_ids=None, content=None, stage=None, eblock=None):  # noqa: E501
+    def __init__(self, entry_hash=None, chain=None, created_at=None, external_ids=None, content=None, stage=None, dblock=None, eblock=None):  # noqa: E501
         """EntryData - a model defined in OpenAPI"""  # noqa: E501
 
         self._entry_hash = None
@@ -60,23 +62,18 @@ class EntryData(object):
         self._external_ids = None
         self._content = None
         self._stage = None
+        self._dblock = None
         self._eblock = None
         self.discriminator = None
 
-        if entry_hash is not None:
-            self.entry_hash = entry_hash
-        if chain is not None:
-            self.chain = chain
-        if created_at is not None:
-            self.created_at = created_at
-        if external_ids is not None:
-            self.external_ids = external_ids
-        if content is not None:
-            self.content = content
-        if stage is not None:
-            self.stage = stage
-        if eblock is not None:
-            self.eblock = eblock
+        self.entry_hash = entry_hash
+        self.chain = chain
+        self.created_at = created_at
+        self.external_ids = external_ids
+        self.content = content
+        self.stage = stage
+        self.dblock = dblock
+        self.eblock = eblock
 
     @property
     def entry_hash(self):
@@ -98,6 +95,8 @@ class EntryData(object):
         :param entry_hash: The entry_hash of this EntryData.  # noqa: E501
         :type: str
         """
+        if entry_hash is None:
+            raise ValueError("Invalid value for `entry_hash`, must not be `None`")  # noqa: E501
 
         self._entry_hash = entry_hash
 
@@ -107,7 +106,7 @@ class EntryData(object):
 
 
         :return: The chain of this EntryData.  # noqa: E501
-        :rtype: EntryLinkChain
+        :rtype: EntryListChain
         """
         return self._chain
 
@@ -117,8 +116,10 @@ class EntryData(object):
 
 
         :param chain: The chain of this EntryData.  # noqa: E501
-        :type: EntryLinkChain
+        :type: EntryListChain
         """
+        if chain is None:
+            raise ValueError("Invalid value for `chain`, must not be `None`")  # noqa: E501
 
         self._chain = chain
 
@@ -126,7 +127,7 @@ class EntryData(object):
     def created_at(self):
         """Gets the created_at of this EntryData.  # noqa: E501
 
-        The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`  # noqa: E501
+        The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`  # noqa: E501
 
         :return: The created_at of this EntryData.  # noqa: E501
         :rtype: str
@@ -137,11 +138,13 @@ class EntryData(object):
     def created_at(self, created_at):
         """Sets the created_at of this EntryData.
 
-        The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`  # noqa: E501
+        The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`  # noqa: E501
 
         :param created_at: The created_at of this EntryData.  # noqa: E501
         :type: str
         """
+        if created_at is None:
+            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 
@@ -165,6 +168,8 @@ class EntryData(object):
         :param external_ids: The external_ids of this EntryData.  # noqa: E501
         :type: list[str]
         """
+        if external_ids is None:
+            raise ValueError("Invalid value for `external_ids`, must not be `None`")  # noqa: E501
 
         self._external_ids = external_ids
 
@@ -188,6 +193,8 @@ class EntryData(object):
         :param content: The content of this EntryData.  # noqa: E501
         :type: str
         """
+        if content is None:
+            raise ValueError("Invalid value for `content`, must not be `None`")  # noqa: E501
 
         self._content = content
 
@@ -211,8 +218,33 @@ class EntryData(object):
         :param stage: The stage of this EntryData.  # noqa: E501
         :type: str
         """
+        if stage is None:
+            raise ValueError("Invalid value for `stage`, must not be `None`")  # noqa: E501
 
         self._stage = stage
+
+    @property
+    def dblock(self):
+        """Gets the dblock of this EntryData.  # noqa: E501
+
+
+        :return: The dblock of this EntryData.  # noqa: E501
+        :rtype: EntryDataDblock
+        """
+        return self._dblock
+
+    @dblock.setter
+    def dblock(self, dblock):
+        """Sets the dblock of this EntryData.
+
+
+        :param dblock: The dblock of this EntryData.  # noqa: E501
+        :type: EntryDataDblock
+        """
+        if dblock is None:
+            raise ValueError("Invalid value for `dblock`, must not be `None`")  # noqa: E501
+
+        self._dblock = dblock
 
     @property
     def eblock(self):
@@ -232,6 +264,8 @@ class EntryData(object):
         :param eblock: The eblock of this EntryData.  # noqa: E501
         :type: EntryDataEblock
         """
+        if eblock is None:
+            raise ValueError("Invalid value for `eblock`, must not be `None`")  # noqa: E501
 
         self._eblock = eblock
 

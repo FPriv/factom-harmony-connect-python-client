@@ -33,7 +33,7 @@ class EntryListData(object):
     """
     openapi_types = {
         'entry_hash': 'str',
-        'chain': 'EntryLinkChain',
+        'chain': 'EntryListChain',
         'created_at': 'str',
         'href': 'str'
     }
@@ -90,7 +90,7 @@ class EntryListData(object):
 
 
         :return: The chain of this EntryListData.  # noqa: E501
-        :rtype: EntryLinkChain
+        :rtype: EntryListChain
         """
         return self._chain
 
@@ -100,7 +100,7 @@ class EntryListData(object):
 
 
         :param chain: The chain of this EntryListData.  # noqa: E501
-        :type: EntryLinkChain
+        :type: EntryListChain
         """
         if chain is None:
             raise ValueError("Invalid value for `chain`, must not be `None`")  # noqa: E501
@@ -111,7 +111,7 @@ class EntryListData(object):
     def created_at(self):
         """Gets the created_at of this EntryListData.  # noqa: E501
 
-        The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`  # noqa: E501
+        The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`  # noqa: E501
 
         :return: The created_at of this EntryListData.  # noqa: E501
         :rtype: str
@@ -122,7 +122,7 @@ class EntryListData(object):
     def created_at(self, created_at):
         """Sets the created_at of this EntryListData.
 
-        The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`  # noqa: E501
+        The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`  # noqa: E501
 
         :param created_at: The created_at of this EntryListData.  # noqa: E501
         :type: str
