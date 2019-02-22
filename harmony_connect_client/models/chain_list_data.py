@@ -34,26 +34,34 @@ class ChainListData(object):
     openapi_types = {
         'chain_id': 'str',
         'external_ids': 'list[str]',
-        'href': 'str'
+        'href': 'str',
+        'stage': 'str',
+        'created_at': 'str'
     }
 
     attribute_map = {
         'chain_id': 'chain_id',
         'external_ids': 'external_ids',
-        'href': 'href'
+        'href': 'href',
+        'stage': 'stage',
+        'created_at': 'created_at'
     }
 
-    def __init__(self, chain_id=None, external_ids=None, href=None):  # noqa: E501
+    def __init__(self, chain_id=None, external_ids=None, href=None, stage=None, created_at=None):  # noqa: E501
         """ChainListData - a model defined in OpenAPI"""  # noqa: E501
 
         self._chain_id = None
         self._external_ids = None
         self._href = None
+        self._stage = None
+        self._created_at = None
         self.discriminator = None
 
         self.chain_id = chain_id
         self.external_ids = external_ids
         self.href = href
+        self.stage = stage
+        self.created_at = created_at
 
     @property
     def chain_id(self):
@@ -129,6 +137,56 @@ class ChainListData(object):
             raise ValueError("Invalid value for `href`, must not be `None`")  # noqa: E501
 
         self._href = href
+
+    @property
+    def stage(self):
+        """Gets the stage of this ChainListData.  # noqa: E501
+
+        The level of immutability that this chain has reached.  # noqa: E501
+
+        :return: The stage of this ChainListData.  # noqa: E501
+        :rtype: str
+        """
+        return self._stage
+
+    @stage.setter
+    def stage(self, stage):
+        """Sets the stage of this ChainListData.
+
+        The level of immutability that this chain has reached.  # noqa: E501
+
+        :param stage: The stage of this ChainListData.  # noqa: E501
+        :type: str
+        """
+        if stage is None:
+            raise ValueError("Invalid value for `stage`, must not be `None`")  # noqa: E501
+
+        self._stage = stage
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this ChainListData.  # noqa: E501
+
+        The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.  # noqa: E501
+
+        :return: The created_at of this ChainListData.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this ChainListData.
+
+        The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.  # noqa: E501
+
+        :param created_at: The created_at of this ChainListData.  # noqa: E501
+        :type: str
+        """
+        if created_at is None:
+            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
+
+        self._created_at = created_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

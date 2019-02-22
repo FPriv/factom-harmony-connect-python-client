@@ -33,13 +33,13 @@ class InfoApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_all_info(self, **kwargs):  # noqa: E501
+    def get_api_info(self, **kwargs):  # noqa: E501
         """API Info  # noqa: E501
 
         Request general information about the Connect API such as the version and available endpoints.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_all_info(async_req=True)
+        >>> thread = api.get_api_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,18 +49,18 @@ class InfoApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_all_info_with_http_info(**kwargs)  # noqa: E501
+            return self.get_api_info_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.get_all_info_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_api_info_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def get_all_info_with_http_info(self, **kwargs):  # noqa: E501
+    def get_api_info_with_http_info(self, **kwargs):  # noqa: E501
         """API Info  # noqa: E501
 
         Request general information about the Connect API such as the version and available endpoints.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_all_info_with_http_info(async_req=True)
+        >>> thread = api.get_api_info_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -81,7 +81,7 @@ class InfoApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_all_info" % key
+                    " to method get_api_info" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']

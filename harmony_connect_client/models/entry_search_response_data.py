@@ -34,25 +34,29 @@ class EntrySearchResponseData(object):
     openapi_types = {
         'entry_hash': 'str',
         'external_ids': 'list[str]',
+        'stage': 'str',
         'href': 'str'
     }
 
     attribute_map = {
         'entry_hash': 'entry_hash',
         'external_ids': 'external_ids',
+        'stage': 'stage',
         'href': 'href'
     }
 
-    def __init__(self, entry_hash=None, external_ids=None, href=None):  # noqa: E501
+    def __init__(self, entry_hash=None, external_ids=None, stage=None, href=None):  # noqa: E501
         """EntrySearchResponseData - a model defined in OpenAPI"""  # noqa: E501
 
         self._entry_hash = None
         self._external_ids = None
+        self._stage = None
         self._href = None
         self.discriminator = None
 
         self.entry_hash = entry_hash
         self.external_ids = external_ids
+        self.stage = stage
         self.href = href
 
     @property
@@ -104,6 +108,31 @@ class EntrySearchResponseData(object):
             raise ValueError("Invalid value for `external_ids`, must not be `None`")  # noqa: E501
 
         self._external_ids = external_ids
+
+    @property
+    def stage(self):
+        """Gets the stage of this EntrySearchResponseData.  # noqa: E501
+
+        The level of immutability that this entry has reached.  # noqa: E501
+
+        :return: The stage of this EntrySearchResponseData.  # noqa: E501
+        :rtype: str
+        """
+        return self._stage
+
+    @stage.setter
+    def stage(self, stage):
+        """Sets the stage of this EntrySearchResponseData.
+
+        The level of immutability that this entry has reached.  # noqa: E501
+
+        :param stage: The stage of this EntrySearchResponseData.  # noqa: E501
+        :type: str
+        """
+        if stage is None:
+            raise ValueError("Invalid value for `stage`, must not be `None`")  # noqa: E501
+
+        self._stage = stage
 
     @property
     def href(self):

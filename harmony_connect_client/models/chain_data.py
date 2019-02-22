@@ -33,31 +33,47 @@ class ChainData(object):
     """
     openapi_types = {
         'chain_id': 'str',
+        'content': 'str',
         'external_ids': 'list[str]',
         'stage': 'str',
-        'entries': 'ChainDataEntries'
+        'entries': 'ChainDataEntries',
+        'eblock': 'ChainDataEblock',
+        'dblock': 'ChainDataDblock',
+        'created_at': 'str'
     }
 
     attribute_map = {
         'chain_id': 'chain_id',
+        'content': 'content',
         'external_ids': 'external_ids',
         'stage': 'stage',
-        'entries': 'entries'
+        'entries': 'entries',
+        'eblock': 'eblock',
+        'dblock': 'dblock',
+        'created_at': 'created_at'
     }
 
-    def __init__(self, chain_id=None, external_ids=None, stage=None, entries=None):  # noqa: E501
+    def __init__(self, chain_id=None, content=None, external_ids=None, stage=None, entries=None, eblock=None, dblock=None, created_at=None):  # noqa: E501
         """ChainData - a model defined in OpenAPI"""  # noqa: E501
 
         self._chain_id = None
+        self._content = None
         self._external_ids = None
         self._stage = None
         self._entries = None
+        self._eblock = None
+        self._dblock = None
+        self._created_at = None
         self.discriminator = None
 
         self.chain_id = chain_id
+        self.content = content
         self.external_ids = external_ids
         self.stage = stage
         self.entries = entries
+        self.eblock = eblock
+        self.dblock = dblock
+        self.created_at = created_at
 
     @property
     def chain_id(self):
@@ -83,6 +99,31 @@ class ChainData(object):
             raise ValueError("Invalid value for `chain_id`, must not be `None`")  # noqa: E501
 
         self._chain_id = chain_id
+
+    @property
+    def content(self):
+        """Gets the content of this ChainData.  # noqa: E501
+
+        This is the data that was stored in the first entry of this chain.  # noqa: E501
+
+        :return: The content of this ChainData.  # noqa: E501
+        :rtype: str
+        """
+        return self._content
+
+    @content.setter
+    def content(self, content):
+        """Sets the content of this ChainData.
+
+        This is the data that was stored in the first entry of this chain.  # noqa: E501
+
+        :param content: The content of this ChainData.  # noqa: E501
+        :type: str
+        """
+        if content is None:
+            raise ValueError("Invalid value for `content`, must not be `None`")  # noqa: E501
+
+        self._content = content
 
     @property
     def external_ids(self):
@@ -156,6 +197,77 @@ class ChainData(object):
             raise ValueError("Invalid value for `entries`, must not be `None`")  # noqa: E501
 
         self._entries = entries
+
+    @property
+    def eblock(self):
+        """Gets the eblock of this ChainData.  # noqa: E501
+
+
+        :return: The eblock of this ChainData.  # noqa: E501
+        :rtype: ChainDataEblock
+        """
+        return self._eblock
+
+    @eblock.setter
+    def eblock(self, eblock):
+        """Sets the eblock of this ChainData.
+
+
+        :param eblock: The eblock of this ChainData.  # noqa: E501
+        :type: ChainDataEblock
+        """
+        if eblock is None:
+            raise ValueError("Invalid value for `eblock`, must not be `None`")  # noqa: E501
+
+        self._eblock = eblock
+
+    @property
+    def dblock(self):
+        """Gets the dblock of this ChainData.  # noqa: E501
+
+
+        :return: The dblock of this ChainData.  # noqa: E501
+        :rtype: ChainDataDblock
+        """
+        return self._dblock
+
+    @dblock.setter
+    def dblock(self, dblock):
+        """Sets the dblock of this ChainData.
+
+
+        :param dblock: The dblock of this ChainData.  # noqa: E501
+        :type: ChainDataDblock
+        """
+        if dblock is None:
+            raise ValueError("Invalid value for `dblock`, must not be `None`")  # noqa: E501
+
+        self._dblock = dblock
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this ChainData.  # noqa: E501
+
+        The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.  # noqa: E501
+
+        :return: The created_at of this ChainData.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this ChainData.
+
+        The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.  # noqa: E501
+
+        :param created_at: The created_at of this ChainData.  # noqa: E501
+        :type: str
+        """
+        if created_at is None:
+            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
+
+        self._created_at = created_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

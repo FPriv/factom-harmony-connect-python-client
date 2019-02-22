@@ -1,4 +1,4 @@
-# EntryLinkChain
+# EntryListChain
 
 ## Properties
 Name | Type | Description | Notes

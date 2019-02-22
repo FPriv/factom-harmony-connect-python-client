@@ -140,8 +140,8 @@ class ChainsApi(object):
 
         :param async_req bool
         :param int limit: The number of items you would like back in each page.
-        :param int offset: The page you would like to request. The first page offset is Zero.
-        :param str stages: The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'multi_az,factom'`.
+        :param int offset: The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position.
+        :param str stages: The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'replicated,factom'`.
         :return: ChainList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -164,8 +164,8 @@ class ChainsApi(object):
 
         :param async_req bool
         :param int limit: The number of items you would like back in each page.
-        :param int offset: The page you would like to request. The first page offset is Zero.
-        :param str stages: The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'multi_az,factom'`.
+        :param int offset: The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position.
+        :param str stages: The immutability stages you want to restrict results to. You can choose any from `replicated`, `factom`, and `anchored`. If you would like to search among multiple stages, send them in a comma separated string. For example: `'replicated,factom'`.
         :return: ChainList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -341,7 +341,7 @@ class ChainsApi(object):
         :param async_req bool
         :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
-        :param int offset: The page you would like to request. The first page offset is Zero.
+        :param int offset: The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position.
         :return: ChainList
                  If the method is called asynchronously,
                  returns the request thread.
@@ -365,7 +365,7 @@ class ChainsApi(object):
         :param async_req bool
         :param SearchBody search_body: (required)
         :param int limit: The number of items you would like back in each page.
-        :param int offset: The page you would like to request. The first page offset is Zero.
+        :param int offset: The offset parameter allows you to select which item you would like to start from when you get back a list from Connect. For example, if you've already seen the first 15 items and you'd like the next set, you would send an offset of 15. `offset=0` starts from the first item of the set and is the default position.
         :return: ChainList
                  If the method is called asynchronously,
                  returns the request thread.

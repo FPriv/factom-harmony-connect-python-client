@@ -4,11 +4,11 @@ All URIs are relative to *https://connect-shared-sandbox-2445582615332.productio
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_info**](InfoApi.md#get_all_info) | **GET** / | API Info
+[**get_api_info**](InfoApi.md#get_api_info) | **GET** / | API Info
 
 
-# **get_all_info**
-> AllInfo get_all_info()
+# **get_api_info**
+> AllInfo get_api_info()
 
 API Info
 
@@ -34,10 +34,10 @@ api_instance = harmony_connect_client.InfoApi(harmony_connect_client.ApiClient(c
 
 try:
     # API Info
-    api_response = api_instance.get_all_info()
+    api_response = api_instance.get_api_info()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InfoApi->get_all_info: %s\n" % e)
+    print("Exception when calling InfoApi->get_api_info: %s\n" % e)
 ```
 
 
@@ -59,10 +59,10 @@ api_instance = harmony_connect_client.InfoApi(harmony_connect_client.ApiClient(c
 
 try:
     # API Info
-    api_response = api_instance.get_all_info()
+    api_response = api_instance.get_api_info()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InfoApi->get_all_info: %s\n" % e)
+    print("Exception when calling InfoApi->get_api_info: %s\n" % e)
 ```
 
 ### Parameters
