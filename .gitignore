@@ -20,9 +20,11 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -44,6 +46,7 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+.pytest_cache/
 venv/
 .python-version
 
@@ -53,6 +56,8 @@ venv/
 
 # Django stuff:
 *.log
+local_settings.py
+db.sqlite3
 
 # Sphinx documentation
 docs/_build/
@@ -62,3 +67,6 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Openapi
+git_push.sh
