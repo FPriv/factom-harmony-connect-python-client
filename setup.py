@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "harmony-connect-client"
-VERSION = "1.0.1"
+VERSION = "1.0.5"
 # To install the library, run the following
 #
 # python setup.py install
@@ -35,6 +35,13 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
+=============================
+Harmony Connect Client
+=============================
+
+Harmony Connect is your fast lane to the blockchain. Add blockchain capabilities to any software without needing to wrestle with currencies, wallets, or blockchain nodes. Instead, you get easy read and write access to the Factom blockchain. Connect will also track your data's path to immutability and will notify you along the way.
+
+
 ============
 Requirements
 ============
@@ -81,6 +88,8 @@ Then import the package:
 =============================
 Harmony Connect Documentation
 =============================
-This client is built to communicate with Factom Harmony Connect. For more information about using this API, please visit the Harmony Connect `documentation <https://docs.harmony.factom.com>`_
+This client is built to communicate with Factom Harmony Connect. For more information about using this API, please visit the Harmony Connect `documentation <https://docs.harmony.factom.com>`_.
+
+You can create a free account at `Factom.com <https://account.factom.com>`_.
     """
 )

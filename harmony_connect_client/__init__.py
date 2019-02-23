@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.1"
+__version__ = "1.0.5"
 
 # import apis into sdk package
 from harmony_connect_client.api.chains_api import ChainsApi

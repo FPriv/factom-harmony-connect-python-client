@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **external_ids** | **list[str]** | Tags that can be used to identify your entry. You can search for records that contain a particular external_id using Connect. External IDs are returned in Base64. | 
 **content** | **str** | This is the data that is stored by the entry. Content will be sent in Base64 format. | 
 **stage** | **str** | The level of immutability that this entry has reached. | 
-**dblock** | [**EntryDataDblock**](EntryDataDblock.md) |  | 
-**eblock** | [**EntryDataEblock**](EntryDataEblock.md) |  | 
+**dblock** | [**EntryDataDblock**](EntryDataDblock.md) |  | [optional] 
+**eblock** | [**EntryDataEblock**](EntryDataEblock.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

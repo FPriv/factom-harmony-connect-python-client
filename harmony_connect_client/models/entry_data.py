@@ -72,8 +72,10 @@ class EntryData(object):
         self.external_ids = external_ids
         self.content = content
         self.stage = stage
-        self.dblock = dblock
-        self.eblock = eblock
+        if dblock is not None:
+            self.dblock = dblock
+        if eblock is not None:
+            self.eblock = eblock
 
     @property
     def entry_hash(self):
@@ -241,8 +243,6 @@ class EntryData(object):
         :param dblock: The dblock of this EntryData.  # noqa: E501
         :type: EntryDataDblock
         """
-        if dblock is None:
-            raise ValueError("Invalid value for `dblock`, must not be `None`")  # noqa: E501
 
         self._dblock = dblock
 
@@ -264,8 +264,6 @@ class EntryData(object):
         :param eblock: The eblock of this EntryData.  # noqa: E501
         :type: EntryDataEblock
         """
-        if eblock is None:
-            raise ValueError("Invalid value for `eblock`, must not be `None`")  # noqa: E501
 
         self._eblock = eblock
 
