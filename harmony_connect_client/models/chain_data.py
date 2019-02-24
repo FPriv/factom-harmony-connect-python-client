@@ -71,8 +71,10 @@ class ChainData(object):
         self.external_ids = external_ids
         self.stage = stage
         self.entries = entries
-        self.eblock = eblock
-        self.dblock = dblock
+        if eblock is not None:
+            self.eblock = eblock
+        if dblock is not None:
+            self.dblock = dblock
         self.created_at = created_at
 
     @property
@@ -216,8 +218,6 @@ class ChainData(object):
         :param eblock: The eblock of this ChainData.  # noqa: E501
         :type: ChainDataEblock
         """
-        if eblock is None:
-            raise ValueError("Invalid value for `eblock`, must not be `None`")  # noqa: E501
 
         self._eblock = eblock
 
@@ -239,8 +239,6 @@ class ChainData(object):
         :param dblock: The dblock of this ChainData.  # noqa: E501
         :type: ChainDataDblock
         """
-        if dblock is None:
-            raise ValueError("Invalid value for `dblock`, must not be `None`")  # noqa: E501
 
         self._dblock = dblock
 
