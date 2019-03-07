@@ -56,7 +56,8 @@ class EntryListData(object):
 
         self.entry_hash = entry_hash
         self.chain = chain
-        self.created_at = created_at
+        if created_at is not None:
+            self.created_at = created_at
         self.href = href
 
     @property
@@ -127,8 +128,6 @@ class EntryListData(object):
         :param created_at: The created_at of this EntryListData.  # noqa: E501
         :type: str
         """
-        if created_at is None:
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 

@@ -75,7 +75,8 @@ class ChainData(object):
             self.eblock = eblock
         if dblock is not None:
             self.dblock = dblock
-        self.created_at = created_at
+        if created_at is not None:
+            self.created_at = created_at
 
     @property
     def chain_id(self):
@@ -262,8 +263,6 @@ class ChainData(object):
         :param created_at: The created_at of this ChainData.  # noqa: E501
         :type: str
         """
-        if created_at is None:
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 

@@ -61,7 +61,8 @@ class ChainListData(object):
         self.external_ids = external_ids
         self.href = href
         self.stage = stage
-        self.created_at = created_at
+        if created_at is not None:
+            self.created_at = created_at
 
     @property
     def chain_id(self):
@@ -183,8 +184,6 @@ class ChainListData(object):
         :param created_at: The created_at of this ChainListData.  # noqa: E501
         :type: str
         """
-        if created_at is None:
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 
