@@ -68,7 +68,8 @@ class EntryData(object):
 
         self.entry_hash = entry_hash
         self.chain = chain
-        self.created_at = created_at
+        if created_at is not None:
+            self.created_at = created_at
         self.external_ids = external_ids
         self.content = content
         self.stage = stage
@@ -145,8 +146,6 @@ class EntryData(object):
         :param created_at: The created_at of this EntryData.  # noqa: E501
         :type: str
         """
-        if created_at is None:
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 
